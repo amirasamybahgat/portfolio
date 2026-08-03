@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amira Samy Bahgat | UI/UX Professional Designer</title>
+    <meta name="description"
+        content="Portfolio of Amira Samy Bahgat, UI/UX Designer creating beautiful and user-centered digital experiences.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="dark-mode">
+    <!-- Galaxy Canvas (Dark Mode) -->
+    <canvas id="galaxy-canvas"></canvas>
+
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-text">Amira.S.B</div>
+        <div class="loader-progress"></div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-follower"></div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress" id="scroll-progress"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="floating-nav">
+        <div class="nav-container">
+            <a href="#" class="logo">Amira Samy Bahgat</a>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#portfolio" class="nav-link">Work</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                    <i class="ph ph-moon"></i>
+                </button>
+                <a href="#contact" class="btn btn-primary magnetic-btn hide-mobile">Let's Talk</a>
+                <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle mobile menu">
+                    <i class="ph ph-list"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero section">
+            <div class="animated-bg">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+            <div class="container hero-content">
+                <div class="hero-text reveal fade-up">
+                    <p class="greeting">Hello, I'm Amira Samy Bahgat</p>
+                    <h1 class="headline">Creating Beautiful & <br><span class="accent typing-text"></span> Digital
+                        Experiences.</h1>
+                    <p class="subtitle">I design modern websites and mobile applications that combine aesthetics,
+                        usability, and business goals. My mission is turning complex ideas into intuitive digital
+                        products that users enjoy.</p>
+                    <div class="hero-buttons">
+                        <a href="#portfolio" class="btn btn-primary magnetic-btn">View Projects</a>
+                        <a href="cv.html" target="_blank" class="btn btn-outline magnetic-btn">Download CV</a>
+                    </div>
+                </div>
+                <div class="hero-image reveal fade-left">
+                    <div class="profile-wrapper">
+                        <!-- Profile Image -->
+                        <img src="assets/images/profile.jpg" alt="Amira Samy Bahgat"
+                            class="profile-img animated-profile">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about section bg-light">
+            <div class="container">
+                <div class="section-header reveal fade-up">
+                    <span class="section-subtitle">About Me</span>
+                    <h2>About</h2>
+                </div>
+                <div class="about-grid">
+                    <div class="about-content reveal fade-right">
+                        <p class="lead">Creating intuitive digital products backed by user insights and business
+                            strategy.</p>
+                        <p>With 8 years of experience in marketing, I discovered that successful products are built by
+                            understanding both business goals and user needs. </p>
+                        <p>My passion for UI/UX began long before my career, but working closely with clients made me
+                            realize the impact of thoughtful, user-centered design. This inspired me to pursue a career
+                            in UI/UX Design, where I can combine strategic thinking with creative problem-solving to
+                            design meaningful digital experiences.</p>
+                        <p> Let's create products that users love and businesses grow with.</p>
+                    </div>
+                    <div class="about-stats">
+                        <div class="stat-card glass-card reveal fade-up" style="transition-delay: 0.1s">
+                            <span class="stat-number">8</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Years in Marketing</span>
+                        </div>
+                        <div class="stat-card glass-card reveal fade-up" style="transition-delay: 0.2s">
+                            <span class="stat-number" style="font-size: 2.2rem; font-weight: 700;">Junior</span>
+                            <span class="stat-label">UI/UX Designer</span>
+                        </div>
+                        <div class="stat-card glass-card reveal fade-up" style="transition-delay: 0.3s">
+                            <span class="stat-number">6</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Projects Completed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services section">
+            <div class="container">
+                <div class="section-header reveal fade-up">
+                    <span class="section-subtitle">My Expertise</span>
+                    <h2>Services</h2>
+                </div>
+                <div class="services-grid">
+                    <!-- UX Research -->
+                    <div class="service-card glass-card reveal fade-up">
+                        <div class="service-icon"><i class="ph ph-magnifying-glass"></i></div>
+                        <h3>UX Research</h3>
+                    </div>
+                    <!-- User Flow -->
+                    <div class="service-card glass-card reveal fade-up" style="transition-delay: 0.1s">
+                        <div class="service-icon"><i class="ph ph-git-merge"></i></div>
+                        <h3>User Flow</h3>
+                    </div>
+                    <!-- IA -->
+                    <div class="service-card glass-card reveal fade-up" style="transition-delay: 0.2s">
+                        <div class="service-icon"><i class="ph ph-tree-structure"></i></div>
+                        <h3>Information Architecture</h3>
+                    </div>
+                    <!-- Wireframing -->
+                    <div class="service-card glass-card reveal fade-up" style="transition-delay: 0.3s">
+                        <div class="service-icon"><i class="ph ph-bounding-box"></i></div>
+                        <h3>Wireframing</h3>
+                    </div>
+                    <!-- High Fidelity -->
+                    <div class="service-card glass-card reveal fade-up" style="transition-delay: 0.4s">
+                        <div class="service-icon"><i class="ph ph-diamonds-four"></i></div>
+                        <h3>High Fidelity UI</h3>
+                    </div>
+                    <!-- Prototypes -->
+                    <div class="service-card glass-card reveal fade-up" style="transition-delay: 0.5s">
+                        <div class="service-icon"><i class="ph ph-device-mobile"></i></div>
+                        <h3>Interactive Prototypes</h3>
+                    </div>
+                    <!-- Web Design -->
+                    <div class="service-card glass-card reveal fade-up" style="transition-delay: 0.6s">
+                        <div class="service-icon"><i class="ph ph-desktop"></i></div>
+                        <h3>Responsive Website Design</h3>
+                    </div>
+                    <!-- App Design -->
+                    <div class="service-card glass-card reveal fade-up" style="transition-delay: 0.7s">
+                        <div class="service-icon"><i class="ph ph-device-mobile-camera"></i></div>
+                        <h3>Mobile App Design</h3>
+                    </div>
+                    <!-- Usability Testing -->
+                    <div class="service-card glass-card reveal fade-up" style="transition-delay: 0.8s">
+                        <div class="service-icon"><i class="ph ph-check-circle"></i></div>
+                        <h3>Usability Testing</h3>
+                    </div>
+                    <!-- Design Systems -->
+                    <div class="service-card glass-card reveal fade-up" style="transition-delay: 0.9s">
+                        <div class="service-icon"><i class="ph ph-swatches"></i></div>
+                        <h3>Design Systems</h3>
+                    </div>
+                    <!-- Graphic Design -->
+                    <div class="service-card glass-card reveal fade-up" style="transition-delay: 1.0s">
+                        <div class="service-icon"><i class="ph ph-bezier-curve"></i></div>
+                        <h3>Graphic Design</h3>
+                    </div>
+                    <!-- Marketing Strategy -->
+                    <div class="service-card glass-card reveal fade-up" style="transition-delay: 1.1s">
+                        <div class="service-icon"><i class="ph ph-megaphone"></i></div>
+                        <h3>Marketing Strategy</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Design Process -->
+        <section id="process" class="process section bg-light">
+            <div class="container">
+                <div class="section-header reveal fade-up">
+                    <span class="section-subtitle">Workflow</span>
+                    <h2>Design Process</h2>
+                </div>
+                <div class="process-timeline reveal fade-up">
+                    <div class="process-step">
+                        <div class="process-icon"><i class="ph ph-binoculars"></i></div>
+                        <span class="process-name">Research</span>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-icon"><i class="ph ph-users"></i></div>
+                        <span class="process-name">Empathize</span>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-icon"><i class="ph ph-target"></i></div>
+                        <span class="process-name">Define</span>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-icon"><i class="ph ph-sketch-logo"></i></div>
+                        <span class="process-name">Wireframe</span>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-icon"><i class="ph ph-paint-brush"></i></div>
+                        <span class="process-name">UI Design</span>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-icon"><i class="ph ph-play-circle"></i></div>
+                        <span class="process-name">Prototype</span>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-icon"><i class="ph ph-check-square"></i></div>
+                        <span class="process-name">Testing</span>
+                    </div>
+                    <div class="process-step">
+                        <div class="process-icon"><i class="ph ph-file-code"></i></div>
+                        <span class="process-name">Handoff</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills section">
+            <div class="container">
+                <div class="section-header reveal fade-up">
+                    <span class="section-subtitle">Capabilities</span>
+                    <h2>Skills & Tools</h2>
+                </div>
+                <div class="skills-grid">
+                    <div class="skills-column glass-card reveal fade-right">
+                        <h3>UI/UX Skills</h3>
+                        <ul class="skills-list">
+                            <li><i class="ph ph-check text-accent"></i> UX Research</li>
+                            <li><i class="ph ph-check text-accent"></i> Wireframing</li>
+                            <li><i class="ph ph-check text-accent"></i> Prototyping</li>
+                            <li><i class="ph ph-check text-accent"></i> User Flow</li>
+                            <li><i class="ph ph-check text-accent"></i> Design System</li>
+                            <li><i class="ph ph-check text-accent"></i> Responsive Design</li>
+                            <li><i class="ph ph-check text-accent"></i> Usability Testing</li>
+                            <li><i class="ph ph-check text-accent"></i> Visual Hierarchy</li>
+                        </ul>
+                    </div>
+                    <div class="skills-column glass-card reveal fade-left">
+                        <h3>Tools</h3>
+                        <ul class="skills-list">
+                            <li><i class="ph ph-figma-logo text-accent"></i> Figma</li>
+                            <li><i class="ph ph-image text-accent"></i> Adobe Photoshop</li>
+                            <li><i class="ph ph-pen-nib text-accent"></i> Illustrator</li>
+                            <li><i class="ph ph-palette text-accent"></i> Canva</li>
+                            <li><i class="ph ph-chart-line-up text-accent"></i> Google Analytics</li>
+                            <li><i class="ph ph-microsoft-excel-logo text-accent"></i> Microsoft Office</li>
+                            <li><i class="ph ph-meta-logo text-accent"></i> Meta Ads</li>
+                            <li><i class="ph ph-google-logo text-accent"></i> Google Ads</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Education -->
+        <section id="experience" class="experience section bg-light">
+            <div class="container">
+                <div class="row double-column">
+                    <div class="col reveal fade-right">
+                        <div class="section-header">
+                            <span class="section-subtitle">Career Path</span>
+                            <h2>Experience</h2>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2026 – Present</div>
+                                <h3 class="timeline-title">Training UI/UX Professional Designer</h3>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2025 – 2026</div>
+                                <h3 class="timeline-title">Marketing Manager</h3>
+                                <p class="timeline-company">Sign Up Agency</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2024 – 2025</div>
+                                <h3 class="timeline-title">Marketing Manager</h3>
+                                <p class="timeline-company">Go Brand Agency</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2023 – 2024</div>
+                                <h3 class="timeline-title">General Manager</h3>
+                                <p class="timeline-company">Raq Marketing Agency</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2020 – 2023</div>
+                                <h3 class="timeline-title">Digital Marketing Specialist</h3>
+                                <p class="timeline-company">El-Namas Innovation Design</p>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2019 – 2020</div>
+                                <h3 class="timeline-title">Export Officer</h3>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2019– 2023</div>
+                                <h3 class="timeline-title">Freelance Digital Marketing Specialist</h3>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2017 – 2019</div>
+                                <h3 class="timeline-title">Digital Marketing Specialist & Designer</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col reveal fade-left">
+                        <div class="section-header">
+                            <span class="section-subtitle">Academic Background</span>
+                            <h2>Education</h2>
+                        </div>
+                        <div class="timeline">
+                            <div class="timeline-item glass-card card-timeline">
+                                <h3 class="timeline-title">Bachelor Degree</h3>
+                                <p class="timeline-company">Faculty of Specific Education, Computer Department</p>
+                                <span class="badge">Very Good with Honor</span>
+                            </div>
+                            <div class="timeline-item glass-card card-timeline">
+                                <h3 class="timeline-title">Specialist Diploma</h3>
+                                <p class="timeline-company">Computer Science</p>
+                                <span class="badge">Very Good</span>
+                            </div>
+                        </div>
+
+                        <div class="section-header mt-5">
+                            <span class="section-subtitle">Achievements</span>
+                            <h2>Certificates</h2>
+                        </div>
+                        <div class="certificates-grid">
+                            <div class="cert-card glass-card">Digital Egypt Initiative</div>
+                            <div class="cert-card glass-card">Advanced Marketing Analytics <br><small>Udacity</small>
+                            </div>
+                            <div class="cert-card glass-card">Digital Marketing Professional <br><small>Udacity</small>
+                            </div>
+                            <div class="cert-card glass-card">Cisco IT Essentials</div>
+                            <div class="cert-card glass-card">ICDL</div>
+                            <div class="cert-card glass-card">Intel Learn Program</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects -->
+        <section id="portfolio" class="portfolio section">
+            <div class="container">
+                <div class="section-header reveal fade-up">
+                    <span class="section-subtitle">Portfolio</span>
+                    <h2>Featured Projects</h2>
+                </div>
+
+                <div class="project-filters reveal fade-up">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="web">Web Design</button>
+                    <button class="filter-btn" data-filter="app">Mobile App</button>
+                    <button class="filter-btn" data-filter="landing">Landing Page</button>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card glass-card reveal fade-up" data-category="app" style="cursor:pointer;"
+                        onclick="window.open('https://www.figma.com/design/SRYrGpgCHgj8FsyXlb0kge/Split-Restaurant-Bill--Mid-Fidelity---App---30-6-2026-AS-V3---07-26-2026?node-id=1-4767&t=1GirRO4D3WNTbApE-0','_blank')">
+                        <div class="project-image">
+                            <img src="assets/images/yalla_split_portfolio.png" alt="Restaurant Bill Split App">
+                            <div class="project-overlay">
+                                <a href="https://www.figma.com/design/SRYrGpgCHgj8FsyXlb0kge/Split-Restaurant-Bill--Mid-Fidelity---App---30-6-2026-AS-V3---07-26-2026?node-id=1-4767&t=1GirRO4D3WNTbApE-0"
+                                    target="_blank" class="btn btn-sm btn-primary"
+                                    onclick="event.stopPropagation()">View Case Study</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Mobile App</span>
+                            <h3 class="project-title">Restaurant Bill Split App</h3>
+                            <div class="project-links">
+                                <a href="https://www.figma.com/design/SRYrGpgCHgj8FsyXlb0kge/Split-Restaurant-Bill--Mid-Fidelity---App---30-6-2026-AS-V3---07-26-2026?node-id=1-4767&t=1GirRO4D3WNTbApE-0"
+                                    target="_blank" class="link-btn" onclick="event.stopPropagation()"><i
+                                        class="ph ph-play-circle"></i> Prototype</a>
+                                <a href="#" class="link-btn" onclick="event.stopPropagation()"><i
+                                        class="ph ph-behance-logo"></i> Behance</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="project-card glass-card reveal fade-up" data-category="web"
+                        style="transition-delay: 0.1s; cursor:pointer;"
+                        onclick="window.open('https://www.figma.com/design/UorXIaRO0QTNOjTWKgUBgk/Component?node-id=304-184&p=f&t=jj3MKdYOrxgj3FCf-0','_blank')">
+                        <div class="project-image">
+                            <img src="assets/images/health_dashboard_1784459292529.png" alt="Healthcare Dashboard">
+                            <div class="project-overlay">
+                                <a href="https://www.figma.com/design/UorXIaRO0QTNOjTWKgUBgk/Component?node-id=304-184&p=f&t=jj3MKdYOrxgj3FCf-0"
+                                    target="_blank" class="btn btn-sm btn-primary"
+                                    onclick="event.stopPropagation()">View Case Study</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Web Dashboard</span>
+                            <h3 class="project-title">Healthcare Dashboard</h3>
+                            <div class="project-links">
+                                <a href="https://www.figma.com/design/UorXIaRO0QTNOjTWKgUBgk/Component?node-id=304-184&p=f&t=jj3MKdYOrxgj3FCf-0"
+                                    target="_blank" class="link-btn" onclick="event.stopPropagation()"><i
+                                        class="ph ph-play-circle"></i> Prototype</a>
+                                <a href="#" class="link-btn" onclick="event.stopPropagation()"><i
+                                        class="ph ph-behance-logo"></i> Behance</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="project-card glass-card reveal fade-up" data-category="web"
+                        style="transition-delay: 0.2s; cursor:pointer;"
+                        onclick="window.open('https://www.figma.com/proto/UorXIaRO0QTNOjTWKgUBgk/Component?node-id=304-390&p=f&t=TrgENSeMikWpxzWW-0&scaling=min-zoom&content-scaling=fixed&page-id=304%3A389','_blank')">
+                        <div class="project-image">
+                            <img src="assets/images/ecommerce_web_1784459302928.png" alt="E-Commerce Website">
+                            <div class="project-overlay">
+                                <a href="https://www.figma.com/proto/UorXIaRO0QTNOjTWKgUBgk/Component?node-id=304-390&p=f&t=TrgENSeMikWpxzWW-0&scaling=min-zoom&content-scaling=fixed&page-id=304%3A389"
+                                    target="_blank" class="btn btn-sm btn-primary"
+                                    onclick="event.stopPropagation()">View Case Study</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Web Design</span>
+                            <h3 class="project-title">E-Commerce Website</h3>
+                            <div class="project-links">
+                                <a href="https://www.figma.com/proto/UorXIaRO0QTNOjTWKgUBgk/Component?node-id=304-390&p=f&t=TrgENSeMikWpxzWW-0&scaling=min-zoom&content-scaling=fixed&page-id=304%3A389"
+                                    target="_blank" class="link-btn" onclick="event.stopPropagation()"><i
+                                        class="ph ph-play-circle"></i> Prototype</a>
+                                <a href="#" class="link-btn" onclick="event.stopPropagation()"><i
+                                        class="ph ph-behance-logo"></i> Behance</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 4 -->
+                    <div class="project-card glass-card reveal fade-up" data-category="landing" style="cursor:pointer;"
+                        onclick="window.open('https://www.figma.com/design/UorXIaRO0QTNOjTWKgUBgk/Component?node-id=304-3529&t=jj3MKdYOrxgj3FCf-0','_blank')">
+                        <div class="project-image">
+                            <img src="assets/images/real_estate_landing_1784459311191.png"
+                                alt="Real Estate Landing Page">
+                            <div class="project-overlay">
+                                <a href="https://www.figma.com/design/UorXIaRO0QTNOjTWKgUBgk/Component?node-id=304-3529&t=jj3MKdYOrxgj3FCf-0"
+                                    target="_blank" class="btn btn-sm btn-primary"
+                                    onclick="event.stopPropagation()">View Case Study</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Landing Page</span>
+                            <h3 class="project-title">Real Estate Landing Page</h3>
+                            <div class="project-links">
+                                <a href="https://www.figma.com/design/UorXIaRO0QTNOjTWKgUBgk/Component?node-id=304-3529&t=jj3MKdYOrxgj3FCf-0"
+                                    target="_blank" class="link-btn" onclick="event.stopPropagation()"><i
+                                        class="ph ph-play-circle"></i> Prototype</a>
+                                <a href="#" class="link-btn" onclick="event.stopPropagation()"><i
+                                        class="ph ph-behance-logo"></i> Behance</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 5 -->
+                    <div class="project-card glass-card reveal fade-up" data-category="app"
+                        style="transition-delay: 0.1s; cursor:pointer;"
+                        onclick="window.open('https://www.figma.com/design/UorXIaRO0QTNOjTWKgUBgk/Component?node-id=304-3530&p=f&t=jj3MKdYOrxgj3FCf-0','_blank')">
+                        <div class="project-image">
+                            <img src="assets/images/finance_app_1784459319740.png" alt="Finance Mobile App">
+                            <div class="project-overlay">
+                                <a href="https://www.figma.com/design/UorXIaRO0QTNOjTWKgUBgk/Component?node-id=304-3530&p=f&t=jj3MKdYOrxgj3FCf-0"
+                                    target="_blank" class="btn btn-sm btn-primary"
+                                    onclick="event.stopPropagation()">View Case Study</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Mobile App</span>
+                            <h3 class="project-title">Finance Mobile App</h3>
+                            <div class="project-links">
+                                <a href="https://www.figma.com/design/UorXIaRO0QTNOjTWKgUBgk/Component?node-id=304-3530&p=f&t=jj3MKdYOrxgj3FCf-0"
+                                    target="_blank" class="link-btn" onclick="event.stopPropagation()"><i
+                                        class="ph ph-play-circle"></i> Prototype</a>
+                                <a href="#" class="link-btn" onclick="event.stopPropagation()"><i
+                                        class="ph ph-behance-logo"></i> Behance</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 6 -->
+                    <div class="project-card glass-card reveal fade-up" data-category="web"
+                        style="transition-delay: 0.2s; cursor:pointer;"
+                        onclick="window.open('https://amiras-superb-site-7da796.webflow.io/','_blank')">
+                        <div class="project-image">
+                            <img src="assets/images/travel_booking_1784459329428.png" alt="Travel Booking Website">
+                            <div class="project-overlay">
+                                <a href="https://amiras-superb-site-7da796.webflow.io/" target="_blank"
+                                    class="btn btn-sm btn-primary" onclick="event.stopPropagation()">View Live Site</a>
+                            </div>
+                        </div>
+                        <div class="project-info">
+                            <span class="project-category">Web Design</span>
+                            <h3 class="project-title">Travel Booking Website</h3>
+                            <div class="project-links">
+                                <a href="https://amiras-superb-site-7da796.webflow.io/" target="_blank" class="link-btn"
+                                    onclick="event.stopPropagation()"><i class="ph ph-globe"></i> Live Site</a>
+                                <a href="#" class="link-btn" onclick="event.stopPropagation()"><i
+                                        class="ph ph-behance-logo"></i> Behance</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Me -->
+        <section class="why-choose-me section bg-light">
+            <div class="container">
+                <div class="section-header reveal fade-up">
+                    <span class="section-subtitle">Values</span>
+                    <h2>Why Choose Me</h2>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card glass-card reveal fade-up">
+                        <div class="feature-icon"><i class="ph ph-trend-up"></i></div>
+                        <h3>Business Thinking</h3>
+                        <p>Bridging the gap between user needs and business objectives.</p>
+                    </div>
+                    <div class="feature-card glass-card reveal fade-up" style="transition-delay: 0.1s">
+                        <div class="feature-icon"><i class="ph ph-users-three"></i></div>
+                        <h3>User-Centered Design</h3>
+                        <p>Prioritizing empathy and research to design what users truly need.</p>
+                    </div>
+                    <div class="feature-card glass-card reveal fade-up" style="transition-delay: 0.2s">
+                        <div class="feature-icon"><i class="ph ph-magic-wand"></i></div>
+                        <h3>Clean Modern Interface</h3>
+                        <p>Creating pixel-perfect, aesthetically pleasing, and highly usable interfaces.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials section">
+            <div class="container">
+                <div class="section-header reveal fade-up">
+                    <span class="section-subtitle">Testimonials</span>
+                    <h2>What People Say</h2>
+                </div>
+                <div class="testimonial-slider reveal fade-up">
+                    <div class="testimonial-track">
+                        <div class="testimonial-card glass-card">
+                            <i class="ph-fill ph-quotes text-accent quote-icon"></i>
+                            <p class="testimonial-text">"Amira's designs are not only visually stunning but also highly
+                                intuitive. She completely transformed our user experience."</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar"><img src="https://i.pravatar.cc/150?img=1" alt="Avatar">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Ahmed Hassan</h4>
+                                    <span>Product Manager</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card glass-card">
+                            <i class="ph-fill ph-quotes text-accent quote-icon"></i>
+                            <p class="testimonial-text">"Great understanding of both marketing and design. The new app
+                                interface she designed increased our conversion rate significantly."</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar"><img src="https://i.pravatar.cc/150?img=5" alt="Avatar">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Sarah Mohamed</h4>
+                                    <span>CEO, Tech Startup</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card glass-card">
+                            <i class="ph-fill ph-quotes text-accent quote-icon"></i>
+                            <p class="testimonial-text">"Professional, dedicated, and incredibly talented. Amira brought
+                                a fresh perspective to our complex dashboard."</p>
+                            <div class="testimonial-author">
+                                <div class="author-avatar"><img src="https://i.pravatar.cc/150?img=3" alt="Avatar">
+                                </div>
+                                <div class="author-info">
+                                    <h4>Omar Ali</h4>
+                                    <span>Engineering Lead</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-btn prev-btn"><i class="ph ph-caret-left"></i></button>
+                        <div class="slider-dots"></div>
+                        <button class="slider-btn next-btn"><i class="ph ph-caret-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact section bg-light">
+            <div class="container">
+                <div class="contact-split">
+                    <div class="contact-text reveal fade-right">
+                        <h2>Let's Build Something <br><span class="text-accent">Amazing Together</span></h2>
+                        <p>Feel free to reach out if you're looking for a designer, have a question, or just want to
+                            connect.</p>
+                        <div class="contact-details mt-4">
+                            <div class="contact-item">
+                                <i class="ph ph-envelope-simple"></i>
+                                <a href="mailto:amirasamybahgat@gmail.com">amirasamybahgat@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="ph ph-phone"></i>
+                                <a href="tel:+201012853470">+20 1012853470</a>
+                            </div>
+                            <div class="contact-item">
+                                <i class="ph ph-map-pin"></i>
+                                <span>Cairo, Egypt</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form-container glass-card reveal fade-left">
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" required placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" name="email" required placeholder="john@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="5" required
+                                    placeholder="Hello Amira, I would like to..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block magnetic-btn">
+                                <span>Send Message</span>
+                                <i class="ph ph-paper-plane-right"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <a href="#">Amira Samy</a>
+            </div>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/amira-samy-bahgat" target="_blank" class="social-icon"
+                    aria-label="LinkedIn">
+                    <i class="ph ph-linkedin-logo"></i>
+                </a>
+                <a href="#" target="_blank" class="social-icon" aria-label="Behance">
+                    <i class="ph ph-behance-logo"></i>
+                </a>
+                <a href="mailto:amirasamybahgat@gmail.com" class="social-icon" aria-label="Email">
+                    <i class="ph ph-envelope-simple"></i>
+                </a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Amira Samy Bahgat. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="ph ph-arrow-up"></i>
+    </button>
+
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
