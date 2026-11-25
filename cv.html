@@ -8,11 +8,11 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: Georgia, 'Times New Roman', Times, serif;
             background: #e8e8e8;
-            color: #000;
-            font-size: 11pt;
-            line-height: 1.5;
+            color: #111;
+            font-size: 10.5pt;
+            line-height: 1.48;
         }
 
         .print-bar {
@@ -20,6 +20,7 @@
             padding: 16px;
             background: #fff;
             border-bottom: 1px solid #ccc;
+            font-family: Arial, sans-serif;
         }
 
         .print-btn {
@@ -56,128 +57,228 @@
             max-width: 850px;
             margin: 28px auto;
             background: #fff;
-            padding: 48px 52px;
+            padding: 46px 56px;
             box-shadow: 0 2px 20px rgba(0,0,0,0.15);
         }
 
         /* HEADER */
         .cv-header {
-            border-bottom: 2px solid #000;
-            padding-bottom: 12px;
-            margin-bottom: 16px;
+            text-align: center;
+            margin-bottom: 18px;
         }
 
         .cv-header h1 {
-            font-size: 20pt;
+            font-size: 21pt;
             font-weight: 700;
-            letter-spacing: 0.3px;
+            letter-spacing: 0.2px;
             margin-bottom: 2px;
+            color: #000;
         }
 
         .cv-header .job-title {
-            font-size: 11.5pt;
-            font-weight: 600;
-            margin-bottom: 8px;
+            font-size: 13pt;
+            font-style: italic;
+            font-weight: 400;
+            margin-bottom: 10px;
+            color: #111;
         }
 
         .contact-row {
             display: flex;
             flex-wrap: wrap;
-            gap: 4px 0;
-            font-size: 10pt;
+            justify-content: center;
+            align-items: center;
+            gap: 6px 20px;
+            font-size: 9.8pt;
+            color: #111;
         }
 
-        .contact-row span {
-            margin-right: 18px;
+        .contact-row.secondary {
+            margin-top: 5px;
+        }
+
+        .contact-item {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .contact-item:hover {
+            text-decoration: underline;
+        }
+
+        .contact-icon {
+            width: 13px;
+            height: 13px;
+            flex-shrink: 0;
+            fill: #111;
         }
 
         /* SECTIONS */
-        .section { margin-bottom: 14px; }
+        .section {
+            margin-bottom: 15px;
+        }
 
         .section-title {
-            font-size: 10.5pt;
+            font-size: 11pt;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1.2px;
+            letter-spacing: 0.6px;
             border-bottom: 1.5px solid #000;
             padding-bottom: 3px;
             margin-bottom: 9px;
+            color: #000;
         }
 
-        .summary-text { font-size: 10.5pt; text-align: justify; }
+        .summary-text {
+            font-size: 10pt;
+            text-align: justify;
+            line-height: 1.48;
+        }
 
-        /* EXPERIENCE */
-        .exp-item { margin-bottom: 11px; }
+        /* EXPERIENCE & EDUCATION */
+        .entry-item {
+            margin-bottom: 9px;
+            break-inside: avoid;
+        }
 
-        .exp-header {
+        .entry-row {
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
-            flex-wrap: wrap;
-            gap: 2px;
+            align-items: flex-start;
+            gap: 16px;
         }
 
-        .exp-title { font-weight: 700; font-size: 11pt; }
-        .exp-date { font-size: 10pt; font-style: italic; white-space: nowrap; }
-        .exp-company { font-size: 10.5pt; font-style: italic; }
-        .exp-location { font-size: 10pt; color: #333; }
+        .entry-left {
+            flex: 1;
+        }
 
-        ul.bullet-list {
-            padding-left: 18px;
+        .entry-right {
+            text-align: right;
+            white-space: nowrap;
+            font-size: 9.8pt;
+            line-height: 1.4;
+        }
+
+        .entry-title {
+            font-weight: 700;
+            font-size: 10.5pt;
+            color: #000;
+        }
+
+        .entry-subtitle {
+            font-style: italic;
+            font-size: 10pt;
+            color: #111;
+        }
+
+        .entry-note {
+            font-size: 10pt;
+            margin-top: 1px;
+        }
+
+        .entry-date {
+            display: block;
+        }
+
+        .entry-location {
+            display: block;
+        }
+
+        ul.dash-list {
+            list-style: none;
             margin-top: 4px;
+            padding-left: 0;
         }
 
-        ul.bullet-list li {
-            font-size: 10.5pt;
-            margin-bottom: 2px;
-        }
-
-        /* EDUCATION */
-        .edu-item { margin-bottom: 10px; }
-
-        .edu-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            flex-wrap: wrap;
-        }
-
-        .edu-degree { font-weight: 700; font-size: 11pt; }
-        .edu-date { font-size: 10pt; font-style: italic; }
-        .edu-school { font-size: 10.5pt; font-style: italic; }
-        .edu-note { font-size: 10pt; margin-top: 2px; }
-
-        /* SKILLS */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 8px 24px;
-        }
-
-        .skill-group-title { font-weight: 700; font-size: 10.5pt; margin-bottom: 2px; }
-        .skill-tags { font-size: 10pt; line-height: 1.6; }
-
-        /* CERTIFICATES */
-        .cert-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 3px 20px;
-        }
-
-        .cert-item {
-            font-size: 10.5pt;
-            padding-left: 13px;
+        ul.dash-list li {
             position: relative;
+            padding-left: 14px;
+            font-size: 10pt;
+            margin-bottom: 2px;
+            line-height: 1.45;
         }
 
-        .cert-item::before { content: "•"; position: absolute; left: 0; }
+        ul.dash-list li::before {
+            content: "-";
+            position: absolute;
+            left: 2px;
+        }
 
-        .inline-list { font-size: 10.5pt; }
+        /* TWO-COLUMN GRIDS */
+        .two-col-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px 32px;
+        }
+
+        .skill-group {
+            margin-bottom: 12px;
+        }
+
+        .skill-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .skill-group-title {
+            font-weight: 700;
+            font-size: 10.2pt;
+            margin-bottom: 3px;
+            color: #000;
+        }
+
+        .lang-item strong {
+            display: block;
+            font-size: 10.2pt;
+            color: #000;
+        }
+
+        .lang-item span {
+            font-size: 10pt;
+        }
+
+        @media (max-width: 640px) {
+            .page-wrapper {
+                margin: 0;
+                padding: 28px 20px;
+                box-shadow: none;
+            }
+            .entry-row {
+                flex-direction: column;
+                gap: 2px;
+            }
+            .entry-right {
+                text-align: left;
+                white-space: normal;
+            }
+            .two-col-grid {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+        }
 
         @media print {
-            body { background: #fff; }
-            .page-wrapper { margin: 0; padding: 28px 36px; box-shadow: none; }
-            .print-bar { display: none; }
+            body {
+                background: #fff;
+            }
+            .print-bar {
+                display: none;
+            }
+            .page-wrapper {
+                margin: 0;
+                padding: 20px 30px;
+                box-shadow: none;
+                max-width: 100%;
+            }
+            .contact-item {
+                text-decoration: none;
+            }
+            .page-break {
+                page-break-before: always;
+                break-before: page;
+            }
         }
     </style>
 </head>
@@ -195,30 +296,48 @@
         <h1>Amira Samy Bahgat</h1>
         <div class="job-title">Marketing Manager</div>
         <div class="contact-row">
-            <span>amirasamybahgat@gmail.com</span>
-            <span>+201012853470</span>
-            <span>Damietta, Egypt</span>
-            <span>linkedin.com/in/amira-samy-bahgat</span>
+            <a class="contact-item" href="mailto:amirasamybahgat@gmail.com">
+                <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                <span>amirasamybahgat@gmail.com</span>
+            </a>
+            <a class="contact-item" href="tel:+201012853470">
+                <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"/></svg>
+                <span>+201012853470</span>
+            </a>
+            <span class="contact-item">
+                <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 0 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+                <span>Damietta, Egypt</span>
+            </span>
+        </div>
+        <div class="contact-row secondary">
+            <a class="contact-item" href="https://linkedin.com/in/amira-samy-bahgat" target="_blank" rel="noopener noreferrer">
+                <svg class="contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                <span>linkedin.com/in/amira-samy-bahgat</span>
+            </a>
         </div>
     </div>
 
     <!-- SUMMARY -->
     <div class="section">
         <div class="section-title">Summary</div>
-        <p class="summary-text">Marketing Manager with 8+ years of experience driving brand growth, developing marketing strategies, and leading cross-functional teams across real estate, nutrition, and healthcare sectors in the Egyptian and Gulf markets. Skilled in brand management, campaign planning, performance marketing, and customer engagement. Currently expanding expertise in UI/UX Design through professional training, combining strategic marketing knowledge with user-centered design principles to create impactful digital experiences that drive both business success and customer satisfaction.</p>
+        <p class="summary-text">Marketing Manager with 8+ years of experience driving brand growth, developing marketing strategies, and leading cross-functional teams across real estate, nutrition, and healthcare sectors in the Egyptian and Gulf markets. Skilled in brand management, campaign planning, performance marketing, and customer engagement. Currently expanding my expertise in UI/UX Design through professional training, combining strategic marketing knowledge with user-centered design principles to create impactful digital experiences that drive both business success and customer satisfaction.</p>
     </div>
 
     <!-- WORK EXPERIENCE -->
     <div class="section">
         <div class="section-title">Work Experience</div>
 
-        <div class="exp-item">
-            <div class="exp-header">
-                <span class="exp-title">Training UI/UX Professional Designer</span>
-                <span class="exp-date">05/2026 – Present</span>
+        <div class="entry-item">
+            <div class="entry-row">
+                <div class="entry-left">
+                    <div class="entry-title">Training UI/UX Professional Design</div>
+                </div>
+                <div class="entry-right">
+                    <span class="entry-date">05/2026 – 09/2026</span>
+                    <span class="entry-location">Cairo, Egypt</span>
+                </div>
             </div>
-            <div class="exp-location">Cairo, Egypt</div>
-            <ul class="bullet-list">
+            <ul class="dash-list">
                 <li>Conducted UX Research to understand user needs and behaviors.</li>
                 <li>Created User Flows to optimize user journeys.</li>
                 <li>Structured Information Architecture for digital products.</li>
@@ -232,76 +351,108 @@
             </ul>
         </div>
 
-        <div class="exp-item">
-            <div class="exp-header">
-                <span class="exp-title">Marketing Manager</span>
-                <span class="exp-date">03/2025 – 04/2026</span>
+        <div class="entry-item">
+            <div class="entry-row">
+                <div class="entry-left">
+                    <div class="entry-title">Marketing Manager</div>
+                    <div class="entry-subtitle">Sign Up Agency</div>
+                </div>
+                <div class="entry-right">
+                    <span class="entry-date">03/2025 – 04/2026</span>
+                    <span class="entry-location">Damietta</span>
+                </div>
             </div>
-            <div class="exp-company">Sign Up Agency</div>
-            <div class="exp-location">Damietta</div>
         </div>
 
-        <div class="exp-item">
-            <div class="exp-header">
-                <span class="exp-title">Marketing Manager</span>
-                <span class="exp-date">09/2024 – 02/2025</span>
+        <div class="entry-item">
+            <div class="entry-row">
+                <div class="entry-left">
+                    <div class="entry-title">Marketing Manager</div>
+                    <div class="entry-subtitle">Go Brand Agency</div>
+                </div>
+                <div class="entry-right">
+                    <span class="entry-date">09/2024 – 02/2025</span>
+                    <span class="entry-location">New Damietta</span>
+                </div>
             </div>
-            <div class="exp-company">Go Brand Agency</div>
-            <div class="exp-location">New Damietta</div>
         </div>
 
-        <div class="exp-item">
-            <div class="exp-header">
-                <span class="exp-title">General Manager</span>
-                <span class="exp-date">02/2024 – 08/2024</span>
+        <div class="entry-item">
+            <div class="entry-row">
+                <div class="entry-left">
+                    <div class="entry-title">General Manager</div>
+                    <div class="entry-subtitle">Raq Marketing Agency - Advertising and Publicity</div>
+                </div>
+                <div class="entry-right">
+                    <span class="entry-date">02/2024 – 08/2024</span>
+                    <span class="entry-location">New Damietta</span>
+                </div>
             </div>
-            <div class="exp-company">Raq Marketing Agency – Advertising and Publicity</div>
-            <div class="exp-location">New Damietta</div>
         </div>
 
-        <div class="exp-item">
-            <div class="exp-header">
-                <span class="exp-title">Digital Marketing Specialist</span>
-                <span class="exp-date">12/2020 – 08/2023</span>
+        <div class="entry-item">
+            <div class="entry-row">
+                <div class="entry-left">
+                    <div class="entry-title">Digital Marketing Specialist</div>
+                    <div class="entry-subtitle">El-Namas Innovation Design Company &amp; Dr Betlo Restaurant</div>
+                </div>
+                <div class="entry-right">
+                    <span class="entry-date">12/2020 – 08/2023</span>
+                    <span class="entry-location">New Damietta</span>
+                </div>
             </div>
-            <div class="exp-company">El-Namas Innovation Design Company &amp; Dr Betlo Restaurant</div>
-            <div class="exp-location">New Damietta</div>
         </div>
 
-        <div class="exp-item">
-            <div class="exp-header">
-                <span class="exp-title">Export Officer</span>
-                <span class="exp-date">08/2019 – 09/2020</span>
+        <div class="entry-item">
+            <div class="entry-row">
+                <div class="entry-left">
+                    <div class="entry-title">Export Officer</div>
+                    <div class="entry-subtitle">EL-OMAR For Martin, Export and Transport Company</div>
+                </div>
+                <div class="entry-right">
+                    <span class="entry-date">08/2019 – 09/2020</span>
+                    <span class="entry-location">Damietta</span>
+                </div>
             </div>
-            <div class="exp-company">EL-OMAR For Martin, Export and Transport Company</div>
-            <div class="exp-location">Damietta</div>
         </div>
 
-        <div class="exp-item">
-            <div class="exp-header">
-                <span class="exp-title">Digital Marketing Specialist – Freelance</span>
-                <span class="exp-date">07/2019 – 03/2020</span>
+        <div class="entry-item">
+            <div class="entry-row">
+                <div class="entry-left">
+                    <div class="entry-title">Digital Marketing Specialist " Freelance "</div>
+                    <div class="entry-subtitle">'REACH TO'</div>
+                </div>
+                <div class="entry-right">
+                    <span class="entry-date">07/2019 – 03/2020</span>
+                    <span class="entry-location">New Damietta</span>
+                </div>
             </div>
-            <div class="exp-company">'REACH TO'</div>
-            <div class="exp-location">New Damietta</div>
         </div>
 
-        <div class="exp-item">
-            <div class="exp-header">
-                <span class="exp-title">Digital Marketing Specialist &amp; Designer</span>
-                <span class="exp-date">05/2019 – 06/2019</span>
+        <div class="entry-item">
+            <div class="entry-row">
+                <div class="entry-left">
+                    <div class="entry-title">Digital Marketing Specialist &amp; Designer</div>
+                    <div class="entry-subtitle">AAL SAMAHY Real Estate Investment Company</div>
+                </div>
+                <div class="entry-right">
+                    <span class="entry-date">05/2019 – 06/2019</span>
+                    <span class="entry-location">Damietta</span>
+                </div>
             </div>
-            <div class="exp-company">AAL SAMAHY Real Estate Investment Company</div>
-            <div class="exp-location">Damietta</div>
         </div>
 
-        <div class="exp-item">
-            <div class="exp-header">
-                <span class="exp-title">Digital Marketing Specialist &amp; Designer</span>
-                <span class="exp-date">12/2017 – 04/2019</span>
+        <div class="entry-item">
+            <div class="entry-row">
+                <div class="entry-left">
+                    <div class="entry-title">Digital Marketing Specialist &amp; Designer</div>
+                    <div class="entry-subtitle">Delta National Real Estate Investment Company</div>
+                </div>
+                <div class="entry-right">
+                    <span class="entry-date">12/2017 – 04/2019</span>
+                    <span class="entry-location">Damietta</span>
+                </div>
             </div>
-            <div class="exp-company">Delta National Real Estate Investment Company</div>
-            <div class="exp-location">Damietta</div>
         </div>
     </div>
 
@@ -309,60 +460,129 @@
     <div class="section">
         <div class="section-title">Education</div>
 
-        <div class="edu-item">
-            <div class="edu-header">
-                <span class="edu-degree">Specialist Diploma in Computer</span>
-                <span class="edu-date">10/2017 – 10/2019</span>
+        <div class="entry-item">
+            <div class="entry-row">
+                <div class="entry-left">
+                    <div class="entry-title">Specialist Diploma In Computer</div>
+                    <div class="entry-subtitle">Faculty of Specific Education, Computer Department</div>
+                    <div class="entry-note">V.Good</div>
+                </div>
+                <div class="entry-right">
+                    <span class="entry-date">10/2017 – 10/2019</span>
+                    <span class="entry-location">Damietta, Egypt</span>
+                </div>
             </div>
-            <div class="edu-school">Faculty of Specific Education, Computer Department – Damietta, Egypt</div>
-            <div class="edu-note">Grade: Very Good</div>
         </div>
 
-        <div class="edu-item">
-            <div class="edu-header">
-                <span class="edu-degree">Bachelor's Degree in Specific Education, Computer Department</span>
-                <span class="edu-date">09/2012 – 07/2016</span>
+        <div class="entry-item">
+            <div class="entry-row">
+                <div class="entry-left">
+                    <div class="entry-title">Bachelor's degree in Specific Education, Computer Department</div>
+                    <div class="entry-subtitle">Faculty of Specific Education, Computer Department</div>
+                </div>
+                <div class="entry-right">
+                    <span class="entry-date">09/2012 – 07/2016</span>
+                    <span class="entry-location">Damietta, Egypt</span>
+                </div>
             </div>
-            <div class="edu-school">Faculty of Specific Education, Computer Department – Damietta, Egypt</div>
-            <div class="edu-note">Grade: Very Good With Honor | Percentage: 81.34% | Ranked 8th in cohort</div>
-            <div class="edu-note">Graduation Project: "Auto Driver Based on Computer Vision (Observer Robot – M.C.R)" | Grade: Excellent</div>
+            <ul class="dash-list">
+                <li>V.Good With Honor Grade with percentage of 81.34% , I am the 8th on my colleagues .</li>
+                <li>Graduation Project: " Auto driver based on computer vision (observer robot (M.C.R)) ".</li>
+                <li>Project Grade: Excellent</li>
+            </ul>
         </div>
     </div>
 
     <!-- CERTIFICATES -->
-    <div class="section">
+    <div class="section page-break">
         <div class="section-title">Certificates</div>
-        <div class="cert-grid">
-            <div class="cert-item">Advanced Marketing Analytics Nanodegree – Udacity (2022)</div>
-            <div class="cert-item">Digital Marketing Professional Nanodegree – Udacity (2021)</div>
-            <div class="cert-item">ICDL</div>
-            <div class="cert-item">English Language Training Program</div>
-            <div class="cert-item">Intel Learn Program – Technology at Work</div>
-            <div class="cert-item">Intel Learn Program – Technology and Community</div>
-            <div class="cert-item">Web Design Competition – Top 20 Students, Damietta University</div>
-            <div class="cert-item">Cisco IT Essentials</div>
+        <div class="two-col-grid">
+            <ul class="dash-list">
+                <li>Advanced Marketing Analytics Nanodegree – Udacity (2022)</li>
+                <li>ICDL</li>
+                <li>English Language Training Program</li>
+                <li>Intel Learn Program – Technology at Work</li>
+            </ul>
+            <ul class="dash-list">
+                <li>Digital Marketing Professional Nanodegree – Udacity (2021)</li>
+                <li>Web Design Competition – Top 20 Students, Damietta University</li>
+                <li>Cisco IT Essentials</li>
+                <li>Intel Learn Program – Technology and Community</li>
+            </ul>
         </div>
     </div>
 
     <!-- TECHNICAL SKILLS -->
     <div class="section">
         <div class="section-title">Technical Skills</div>
-        <div class="skills-grid">
+        <div class="two-col-grid">
             <div>
-                <div class="skill-group-title">Marketing &amp; Strategy</div>
-                <div class="skill-tags">Marketing Strategy · SEO Optimization · Digital Marketing · Brand Management · Campaign Management · Marketing Automation · ROI Analysis · CRO · Content Strategy · Social Media Marketing · Lead Generation · Market Research · Marketing Analytics · A/B Testing · Data Analysis</div>
+                <div class="skill-group">
+                    <div class="skill-group-title">Marketing &amp; Strategy</div>
+                    <ul class="dash-list">
+                        <li>Marketing Strategy</li>
+                        <li>SEO Optimization</li>
+                        <li>Digital Marketing</li>
+                        <li>Brand Management</li>
+                        <li>Campaign Management</li>
+                        <li>Marketing Automation</li>
+                        <li>ROI Analysis</li>
+                        <li>Conversion Rate Optimization (CRO)</li>
+                        <li>Content Strategy</li>
+                        <li>Social Media Marketing</li>
+                        <li>Lead Generation</li>
+                        <li>Market Research</li>
+                        <li>Marketing Analytics</li>
+                        <li>A/B Testing</li>
+                        <li>Data Analysis</li>
+                    </ul>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-group-title">Leadership &amp; Management</div>
+                    <ul class="dash-list">
+                        <li>Team Leadership</li>
+                        <li>Project Management</li>
+                    </ul>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-group-title">Additional Skills</div>
+                    <ul class="dash-list">
+                        <li>Web Design</li>
+                        <li>Sales</li>
+                    </ul>
+                </div>
             </div>
+
             <div>
-                <div class="skill-group-title">UI/UX Design</div>
-                <div class="skill-tags">UI Design · UX Design · Wireframing · Prototyping · UX Research · User Flows · Design Systems · Responsive Design · Usability Testing</div>
-            </div>
-            <div>
-                <div class="skill-group-title">Tools &amp; Platforms</div>
-                <div class="skill-tags">Microsoft Office Suite · Google Analytics · Meta Ads Manager · Figma · Adobe Photoshop · Google Ads · Canva</div>
-            </div>
-            <div>
-                <div class="skill-group-title">Leadership &amp; Management</div>
-                <div class="skill-tags">Team Leadership · Project Management · Web Design · Sales</div>
+                <div class="skill-group">
+                    <div class="skill-group-title">Tools &amp; Platforms</div>
+                    <ul class="dash-list">
+                        <li>Microsoft Office Suite</li>
+                        <li>Google Analytics</li>
+                        <li>Meta Ads Manager</li>
+                        <li>Figma</li>
+                        <li>Adobe Photoshop</li>
+                        <li>Google Ads</li>
+                        <li>Canva</li>
+                    </ul>
+                </div>
+
+                <div class="skill-group">
+                    <div class="skill-group-title">UI/UX Design</div>
+                    <ul class="dash-list">
+                        <li>UI Design</li>
+                        <li>UX Design</li>
+                        <li>Wireframing</li>
+                        <li>Prototyping</li>
+                        <li>UX Research</li>
+                        <li>User Flows</li>
+                        <li>Design Systems</li>
+                        <li>Responsive Design</li>
+                        <li>Usability Testing</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
@@ -370,15 +590,32 @@
     <!-- SOFT SKILLS -->
     <div class="section">
         <div class="section-title">Soft Skills</div>
-        <div class="inline-list">Leadership &nbsp;·&nbsp; Problem Solving &nbsp;·&nbsp; Adaptability &nbsp;·&nbsp; Communication &nbsp;·&nbsp; Team Work &nbsp;·&nbsp; Time Management</div>
+        <div class="two-col-grid">
+            <ul class="dash-list">
+                <li>Leadership</li>
+                <li>Problem Solving</li>
+                <li>Adaptability</li>
+            </ul>
+            <ul class="dash-list">
+                <li>Communication</li>
+                <li>Team Work</li>
+                <li>Time Management</li>
+            </ul>
+        </div>
     </div>
 
     <!-- LANGUAGES -->
     <div class="section">
         <div class="section-title">Languages</div>
-        <div class="inline-list">
-            <strong>Arabic</strong> – Full Professional Proficiency &nbsp;&nbsp;|&nbsp;&nbsp;
-            <strong>English</strong> – Professional Working Proficiency
+        <div class="two-col-grid">
+            <div class="lang-item">
+                <strong>Arabic</strong>
+                <span>Full Professional Proficiency</span>
+            </div>
+            <div class="lang-item">
+                <strong>English</strong>
+                <span>Professional Working Proficiency</span>
+            </div>
         </div>
     </div>
 
