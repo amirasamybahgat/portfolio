@@ -648,7 +648,12 @@
                         </div>
                     </div>
                     <div class="contact-form-container glass-card reveal fade-left">
-                        <form id="contactForm" class="contact-form">
+                        <form id="contactForm" class="contact-form" action="https://api.web3forms.com/submit"
+                            method="POST">
+                            <input type="hidden" name="access_key" value="76cf1789-3e3a-4b00-b48e-9033eacf92d4">
+                            <input type="hidden" name="subject" value="New Message from Portfolio Contact Form">
+                            <input type="hidden" name="from_name" value="Amira Portfolio">
+                            <input type="checkbox" name="botcheck" style="display: none;">
                             <div class="form-group">
                                 <label for="name">Name</label>
                                 <input type="text" id="name" name="name" required placeholder="John Doe">
