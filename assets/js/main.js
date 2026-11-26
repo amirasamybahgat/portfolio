@@ -510,6 +510,18 @@ document.addEventListener('DOMContentLoaded', () => {
             const btn = form.querySelector('button[type="submit"]');
             const originalText = btn.innerHTML;
 
+            const hCaptchaEl = form.querySelector('.h-captcha');
+            const hCaptchaResponse = form.querySelector('textarea[name="h-captcha-response"]')?.value;
+            if (hCaptchaEl && !hCaptchaResponse) {
+                btn.innerHTML = '<span>Please complete the Captcha</span>';
+                btn.style.backgroundColor = '#e67e22';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.style.backgroundColor = '';
+                }, 2500);
+                return;
+            }
+
             btn.disabled = true;
             btn.innerHTML = '<span>Sending...</span>';
             btn.style.opacity = '0.7';
@@ -535,6 +547,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     btn.style.opacity = '1';
                     form.reset();
                 } else {
+                    console.error('Web3Forms error:', result);
                     throw new Error(result.message || 'Submission failed');
                 }
             } catch (error) {
@@ -542,6 +555,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 btn.style.backgroundColor = '#dc3545';
                 btn.style.opacity = '1';
             } finally {
+                if (typeof hcaptcha !== 'undefined') {
+                    hcaptcha.reset();
+                }
                 setTimeout(() => {
                     btn.innerHTML = originalText;
                     btn.style.backgroundColor = '';
