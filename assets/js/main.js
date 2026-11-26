@@ -501,31 +501,54 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     /* ====================================
-       10. FORM VALIDATION
+       10. FORM VALIDATION & WEB3FORMS SUBMISSION
        ==================================== */
     const form = document.getElementById('contactForm');
     if (form) {
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
-            // Basic validation and submission logic here
             const btn = form.querySelector('button[type="submit"]');
             const originalText = btn.innerHTML;
-            
+
+            btn.disabled = true;
             btn.innerHTML = '<span>Sending...</span>';
             btn.style.opacity = '0.7';
-            
-            // Simulate sending
-            setTimeout(() => {
-                btn.innerHTML = '<span>Message Sent!</span> <i class="ph ph-check"></i>';
-                btn.style.backgroundColor = '#28a745';
-                form.reset();
-                
+
+            try {
+                const formData = new FormData(form);
+                const payload = Object.fromEntries(formData.entries());
+
+                const response = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+
+                if (response.ok && result.success) {
+                    btn.innerHTML = '<span>Message Sent!</span> <i class="ph ph-check"></i>';
+                    btn.style.backgroundColor = '#28a745';
+                    btn.style.opacity = '1';
+                    form.reset();
+                } else {
+                    throw new Error(result.message || 'Submission failed');
+                }
+            } catch (error) {
+                btn.innerHTML = '<span>Failed to Send. Try Again</span>';
+                btn.style.backgroundColor = '#dc3545';
+                btn.style.opacity = '1';
+            } finally {
                 setTimeout(() => {
                     btn.innerHTML = originalText;
                     btn.style.backgroundColor = '';
                     btn.style.opacity = '1';
+                    btn.disabled = false;
                 }, 3000);
-            }, 1500);
+            }
         });
     }
 
